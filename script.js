@@ -6,17 +6,18 @@ const sliderProps ={
 }
 
 let discount;
+// check for discounts
 document.querySelector('#checkbox').addEventListener('change' , e =>{
     if(e.target.checked){
-  
         discount =true;
-   
     }else{
         discount =false;
     }
 });
+
 const slider = document.querySelector('.slider-section');
 
+// event listener for getting slider value and show price
 slider.addEventListener("input", event => {
     let val = event.target.value;
     console.log(val);
@@ -30,7 +31,7 @@ slider.addEventListener("input", event => {
 })
 
 
-
+// function changes  color of left side of slider 
 function applyFill(slider) {
 	const percentage = (100 * (slider.value - slider.min)) / (slider.max - slider.min);
 	const bg = `linear-gradient(90deg, ${sliderProps.fill} ${percentage}%, ${sliderProps.background} ${percentage +

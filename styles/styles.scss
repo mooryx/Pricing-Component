@@ -23,8 +23,6 @@ body{
     gap:40px;
     background-color: $very-pale-blue ;
     font-size: 15px;
-   
-    
 }
 header{
     position: relative;
@@ -60,9 +58,6 @@ header{
 
     background-color: $white;
     border-radius: 8px;
-    
-    
-
 }
 .pageviews{
     display: flex;
@@ -111,6 +106,7 @@ header{
         &:hover {
             background-color: $strong-cyan 50% ;
             transform: scale(1.2);
+            box-shadow: 0 5px 20px $soft-cyan;
         }
     }
     &::-moz-range-thumb {
@@ -121,9 +117,7 @@ header{
         background: url('../images/icon-slider.svg') no-repeat center;
         cursor: pointer;
         transition: background-color 0.15s ease-in-out;
-        &:hover {
-            
-        }
+        
     }
 }
 
@@ -132,20 +126,9 @@ header{
     display: flex;
     justify-content: center;
     width: 100%;
-    
-    .slider-bar{
-        height: 10px;
-        width: 90%;
-        background-color: $light-blue;
-        .slider{
-            height: 25px;
-            width : 15px;
-            border-radius: 50%;
-          
-        }
     }
    
-}
+
 .billing{
     grid-area: billing;
     margin: 15px ;
