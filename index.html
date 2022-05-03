@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Interactive pricing component</title>
+  <link rel="stylesheet" href="./styles/styles.css">
+</head>
+
+<body>
+  
+  <header>
+    <h1>Simple, traffic-based pricing</h1>
+    <p>Sign-up for our 30-day trial. No credit card required.</p>
+    <img class="circles" src="./images/pattern-circles.svg" alt="circle">
+  </header>
+
+  <img class="bg-pattern" src="./images/bg-pattern.svg" alt="bg-pattern">
+  <main class="grid-container">
+
+  <!-- pageviews -->
+  <div class="pageviews">
+    <p ><span id="views"></span>K Pageviews</p>
+  </div>
+
+  <!-- price-value -->
+   <div class="price">
+     <p > $
+    <span class="price-value" >16.00</span>  /month</p> 
+  </div>
+
+    <!-- slider -->
+      <div class="slider-section">
+        <input title="sllider" id="slider" type="range" min="0" max="100" value="16" />
+        
+      </div>
+
+      <!-- billing text and button -->
+      <div  class="billing">
+        <p>Monthly billing
+        <span >
+          <label class="switch">
+          <input id="checkbox" title="fgg" type="checkbox" checked>
+          <span class="slider round"></span>
+        </label>
+        </span>
+      </span>
+        <p> Yearly Billing</p> <span class="discount"> 25% discount</span>
+      </div>
+
+      <!-- detail -->
+      <div class="detail" >
+        <div>
+         <p><img class="check-icon" src="./images/icon-check.svg" alt="icon-check"></img>  Unlimited websites</p>
+         <p><img class="check-icon" src="./images/icon-check.svg" alt="icon-check"></img>  100% data ownership</p>
+         <p><img class="check-icon" src="./images/icon-check.svg" alt="icon-check"></img>  Email reports</p>
+        </div>
+
+      </div>
+      <div class="button-section">
+        <div class="button">Start my trial </div>
+      
+  
+
+
+  </div>
+</main>
+<footer>
+
+</footer>
+<!-- 
+  
+  
+
+ 
+
+  
+  
+
+  
+  
+  
+
+  
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  <script src="./script.js"></script>
+</body>
+</html>

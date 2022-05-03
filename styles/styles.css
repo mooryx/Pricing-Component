@@ -1,0 +1,291 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+body {
+  font-family: 'Manrope', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 40px;
+  background-color: #fafbff;
+  font-size: 15px;
+}
+
+header {
+  position: relative;
+  z-index: 2;
+  margin-top: 2%;
+}
+
+.circles {
+  position: absolute;
+  z-index: -3;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.bg-pattern {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  z-index: -5;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  text-align: center;
+      grid-template-areas: "pageviews price" "slider slider" "billing billing" "detail button-section";
+  width: 40vw;
+  height: 60vh;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.pageviews {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: pageviews;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: price;
+  font-weight: 800;
+}
+
+.price .price-value {
+  font-size: 2rem;
+}
+
+#slider {
+  -webkit-appearance: none;
+  width: 90%;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #eaeefb;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+#slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: url("../images/icon-slider.svg") no-repeat center #10d5c2;
+  cursor: pointer;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+
+#slider::-webkit-slider-thumb:hover {
+  background-color: #10d5c2 50%;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+#slider::-moz-range-thumb {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  background: url("../images/icon-slider.svg") no-repeat center;
+  cursor: pointer;
+  -webkit-transition: background-color 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.slider-section {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: slider;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.slider-section .slider-bar {
+  height: 10px;
+  width: 90%;
+  background-color: #eaeefb;
+}
+
+.slider-section .slider-bar .slider {
+  height: 25px;
+  width: 15px;
+  border-radius: 50%;
+}
+
+.billing {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: billing;
+  margin: 15px;
+  font-size: smaller;
+}
+
+.billing p {
+  display: inline;
+}
+
+.billing .discount {
+  background-color: #feece7;
+  border-radius: 5px;
+  padding: 2px 6px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 20px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 1px;
+  bottom: 1px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #10d5c2;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+.detail {
+  font-size: smaller;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: detail;
+  text-align: left;
+}
+
+.button-section {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: button-section;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 40px;
+  background-color: aqua;
+  border-radius: 25px;
+  cursor: pointer;
+  color: white;
+  background-color: #293356;
+  border: 1px solid #293356;
+  font-weight: 800;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: white;
+  color: #293356;
+}
+
+@media (max-width: 1000px) {
+  .grid-container {
+    -ms-grid-columns: 1;
+        grid-template-columns: 1;
+        grid-template-areas: "pageviews" "slider" "price" "billing" "detail" "button-section";
+    width: 90%;
+    height: 25rem;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
